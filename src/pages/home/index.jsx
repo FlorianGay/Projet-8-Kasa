@@ -1,16 +1,13 @@
-import Header from '../../components/header'
-import Banner from '../../assets/banner_1.png'
+import Card from '../../components/card'
+import Banner from '../../components/banner'
+import '../../styles/pages/_home.scss'
+import bannerImg from '../../assets/banner_1.png'
 
 function Home () {
     return (
         <div>
-            <Header />
-            <main>
-                <div className="banner">
-                    <img src={Banner} alt='fond de la bannière' />
-                    <h1>Chez vous, partout et ailleurs</h1>
-                </div>
-            </main>
+            <Banner bannerImg = {bannerImg}/>
+            <Card />
         </div>
     )
 }
