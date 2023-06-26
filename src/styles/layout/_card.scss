@@ -1,3 +1,5 @@
+@import '../base/typography';
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -18,7 +20,7 @@
         }
 
         .gallery_card_title {
-            font-family: 'Montserrat';
+            font-family: 'Montserrat', sans-serif;
             font-size: 18px;
             font-weight: 500;
             color: #ff6060;

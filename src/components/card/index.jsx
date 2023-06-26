@@ -8,7 +8,7 @@ function Card () {
             <div className='gallery'>
                 {
                     logementList.map((list) => 
-                        <Link to='/' key={list.id}>
+                        <Link to={`/logement/${list.id}`} key={list.id}>
                             <figure className='gallery_card'>
                                 <img src={list.cover} alt='Représentation du logement' />
                                 <figcaption className='gallery_card_title'>{list.title}</figcaption>

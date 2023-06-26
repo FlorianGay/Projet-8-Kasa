@@ -1,3 +1,5 @@
+@import '../base/typography';
+
 .banner {
     margin-top: 50px;
     position: relative;
@@ -9,7 +11,7 @@
     }
 
     h1 {
-        font-family: 'Montserrat';
+        font-family: 'Montserrat',sans-serif;
         font-size: 48px;
         font-weight: 500;
         position: absolute;

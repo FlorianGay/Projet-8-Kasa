@@ -1,5 +1,6 @@
+@import '../base/typography';
+
 .collapse {
-    
     margin-top: 30px;
 
     .collapse_title {
@@ -11,24 +12,46 @@
         
         h2 {
         color: white;
-        font-family: 'Montserrat';
+        font-family: 'Montserrat', sans-serif;
         font-size: 24px;
         font-weight: 500;
         margin: 0;
-    }
+        }
+
+        img:hover {
+            cursor: pointer;
+        }
+
     }
 
     .collapse_description {
-        display: flex;
+        display: none;
         padding: 25px 28px 20px 20px;
         align-items: center;
         border-radius: 10px 10px 5px 5px;
         background: var(--gray, #f6f6f6);
 
         span {
-            font-family: 'Montserrat';
+            font-family: 'Montserrat', sans-serif;
             font-size: 18px;
             color: #FF6060;
         }
+    }
+
+    .collapse_description_open {
+        display: flex;
+        animation: open ease-in-out 1000ms normal;
+    }
+    
+}
+
+@keyframes open {
+    from {
+        display: none;
+        transform: scaleY(0);
+    }
+    to {
+        display: flex;
+        transform: scaleY(1);
     }
 }
