@@ -2,6 +2,7 @@ import Banner from "../../components/banner";
 import Collapse from '../../components/collapse';
 import collapseList from '../../datas/propos.json'
 import bannerImg from '../../assets/banner_2.png'
+import '../../styles/pages/_propos.scss'
 
 function Propos () {
     return (

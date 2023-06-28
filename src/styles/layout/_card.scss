@@ -5,7 +5,8 @@
     grid-template-columns: repeat(3, 1fr);
     border-radius: 25px;
     background: #f6f6f6;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 50px;
     padding: 56px 50px;
     margin-top: 43px;
 

@@ -1,8 +1,8 @@
 @import '../base/typography';
 
 .collapse {
-    margin-top: 30px;
     width: 100%;
+    margin-top: 30px;
 
     .collapse_title {
         display: flex;
@@ -23,11 +23,16 @@
             cursor: pointer;
         }
 
+        .img_open {
+            transform: rotate(-180deg);
+            transition-duration: 1000ms;
+        }
+
     }
 
     .collapse_description {
         display: none;
-        padding: 25px 28px 20px 20px;
+        height: 0;
         align-items: center;
         border-radius: 10px 10px 5px 5px;
         background: var(--gray, #f6f6f6);
@@ -42,17 +47,8 @@
     .collapse_description_open {
         display: flex;
         animation: open ease-in-out 1000ms normal;
+        padding: 25px 28px 20px 20px;
+        height: 100%;
     }
     
-}
-
-@keyframes open {
-    from {
-        display: none;
-        transform: scaleY(0);
-    }
-    to {
-        display: flex;
-        transform: scaleY(1);
-    }
 }
