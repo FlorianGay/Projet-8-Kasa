@@ -7,7 +7,6 @@ function Collapse(props) {
     const [isOpen, setIsOpen] = useState('false');
     const [className, setClassName] = useState('');
     console.log(isOpen)
-
     const collapseOpen = () => {
         setIsOpen(prevIsOpen => !prevIsOpen);
         setClassName(prevClassName => 
@@ -18,8 +17,7 @@ function Collapse(props) {
     }
     
     return (
-        <div>
-            <div className="collapse">
+        <div className="collapse">
                 <div className="collapse_title">
                     <h2>{props.title}</h2>
                     <img src={arrowUp} alt='Flèches vers le haut' onClick={collapseOpen} />
@@ -27,7 +25,6 @@ function Collapse(props) {
                 <div className={`collapse_description ${className}`}>
                     <span>{props.description}</span>
                 </div>
-            </div>
         </div>
     )
 }
