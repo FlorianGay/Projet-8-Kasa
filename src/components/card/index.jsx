@@ -3,7 +3,7 @@ import LogementData from '../../datas/logements.json'
 import '../../styles/layout/_card.scss'
 
 function Card () {
-    const logementList = LogementData.slice(0, 6);
+    const logementList = LogementData;
     return (
             <div className='gallery'>
                 {

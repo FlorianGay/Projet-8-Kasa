@@ -1,4 +1,5 @@
 @import '../base/typography';
+@import '../utils/mixins';
 
 .slideshow {
     display: flex;
@@ -10,16 +11,34 @@
     min-height: 415px;
     margin-top: 50px;
 
+    @include mobile-only {
+        margin-top: 27px;
+        min-height: 225px;
+    }
+
     .arrow {
         position: absolute;
+
+        @include mobile-only {
+            width: 24px;
+            height: 24px;
+        }
     }
 
     .arrow_left {
         left: 23.4px;
+
+        @include mobile-only {
+            left: 0;
+        }
     }
 
     .arrow_right {
         right: 23.4px;
+
+        @include mobile-only {
+            right: 0;
+        }
     }
 
     .slideshow_img {
@@ -39,5 +58,9 @@
         font-weight: 500;
         bottom: 24.92px;
         color: white;
+
+        @include mobile-only {
+            display: none;
+        }
     }
 }

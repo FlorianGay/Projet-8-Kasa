@@ -1,11 +1,29 @@
 @import '../base/typography';
+@import '../utils/mixins';
+
+.red {
+    fill: #FF6060;
+}
+
+.gray {
+    fill: gray;
+}
 
 .logement_description_contain {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
 
-    .logement_title {
+    @include mobile-only {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .title_and_tags {
+        display: flex;
+        flex-direction: column;
+
+        .logement_title {
         display: flex;
         flex-direction: column;
         color: #FF6060;
@@ -15,63 +33,110 @@
             font-size: 36px;
             margin: 0;
             font-weight: 500;
+            @include mobile-only {
+                font-size: 18px;
+            }
         }
 
         h3 {
             font-size: 18px;
             margin: 0;
             font-weight: 500;
+
+            @include mobile-only {
+                font-size: 14px;
+            }
+        }
+        }
+        .logement_tags {
+            display: flex;
+            gap: 10px;
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+
+            @include mobile-only {
+                margin: 10px 0 0 0;
+            }
+
+
+            li {
+                padding: 3px 31px 2px 30px;
+                border-radius: 10px;
+                background: #FF6060;
+                color: white;
+                text-align: center;
+                font-size: 14px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+
+                @include mobile-only {
+                    font-size: 10px;
+                }
+            }
         }
     }
 
-    .logement_host {
+    .host_and_rate {
         display: flex;
-        gap: 10px;
-        justify-self: end;
+        flex-direction: column;
+        gap: 21px;
 
-        h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: 500;
-            color: #FF6060;
+        @include mobile-only {
+            flex-direction: row-reverse;
+            gap: 0;
+            justify-content: space-between;
         }
 
-        .logement_host_img {
-            width: 64px;
-            height: 64px;
-            object-fit: cover;
-            border-radius: 64px;
+        .logement_host {
+            display: flex;
+            gap: 10px;
+
+            @include mobile-only {
+                gap: 10px;
+            }
+
+            h3 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                color: #FF6060;
+                margin: 0;
+                align-self: center;
+
+                @include mobile-only {
+                    font-size: 12px;
+                    width: 50%;
+                }
+            }
+
+            .logement_host_img {
+                width: 64px;
+                height: 64px;
+                object-fit: cover;
+                border-radius: 64px;
+
+                @include mobile-only {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
         }
-    }
 
-    .logement_tags {
-        display: flex;
-        gap: 10px;
-        list-style-type: none;
-        padding: 0;
-        margin: 20px 0 0 0;
+        .logement_rating {
+            display: flex;
+            gap: 4px;
 
-        li {
-            
-            padding: 3px 31px 2px 30px;
-            border-radius: 10px;
-            background: #FF6060;
-            color: white;
-            text-align: center;
-            font-size: 14px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
+           svg {
+                width: 36px;
+                height: 36px;
+
+                @include mobile-only {
+                    width: 18px;
+                    height: 18px;
+                }
+           }
         }
-    }
 
-    .logement_rating {
-        display: flex;
-        gap: 4px;
-        justify-self: end;
-
-        img {
-            width: 36px;
-            height: 36px;
-        }
     }
 }

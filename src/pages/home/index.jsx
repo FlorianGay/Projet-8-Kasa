@@ -6,7 +6,7 @@ import bannerImg from '../../assets/banner_1.png'
 function Home () {
     return (
         <div>
-            <Banner bannerImg = {bannerImg}/>
+            <Banner bannerImg={bannerImg} text={true}/>
             <Card />
         </div>
     )

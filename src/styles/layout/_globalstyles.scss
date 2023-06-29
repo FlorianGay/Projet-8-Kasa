@@ -1,0 +1,19 @@
+@import '../utils/mixins';
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+
+    @include mobile-only {
+        max-width: 375px;
+        margin: 0 20px;
+    }
+
+    main {
+        margin: 0 100px;
+
+        @include mobile-only {
+            margin: 0 20px;
+        }
+    }
+}

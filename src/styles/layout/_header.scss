@@ -1,4 +1,5 @@
 @import '../base/typography';
+@import '../utils/mixins';
 
 header {
     display: flex;
@@ -6,9 +7,18 @@ header {
     margin : 45px 100px 0 100px;
     justify-content: space-between;
 
+    @include mobile-only {
+        margin: 20px 0 27px 0;
+    }
+
     img {
         width: 210.32px;
         height: 68px;
+
+        @include mobile-only {
+            width: 145px;
+            height: 46.9px;
+        }
     }
 
     nav {
@@ -16,10 +26,14 @@ header {
         align-items: flex-start;
         gap: 57px;
         align-items: center;
-
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 24px;
+
+        @include mobile-only {
+            gap: 26px;
+            font-size: 12px;
+        }
     }
 
     a {

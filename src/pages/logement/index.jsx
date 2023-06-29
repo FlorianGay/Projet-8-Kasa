@@ -23,6 +23,7 @@ function Logement() {
                         hostName = {list.host.name}
                         hostImg = {list.host.picture}
                         logementListTags = {list.tags}
+                        rating={list.rating}
                     />
                     <div className="logement_collapse">
                         <Collapse 

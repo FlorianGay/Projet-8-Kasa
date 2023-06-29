@@ -1,6 +1,14 @@
+@import '../utils/mixins';
+
 .logement_collapse {
     display: flex;
     justify-content: space-between;
     gap: 76px;
+
+    @include mobile-only {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
