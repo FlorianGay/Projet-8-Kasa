@@ -1,0 +1,9 @@
+@import '../utils/mixins';
+
+.collapse-group {
+    padding: 0 109px;
+
+    @include mobile-only {
+        padding: 0;
+    }
+}

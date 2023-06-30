@@ -7,8 +7,7 @@ function Collapse(props) {
     const [isOpen, setIsOpen] = useState('false');
     const [className, setClassName] = useState('');
     const [classNameImg, setClassNameImg] = useState('')
-    console.log(isOpen)
-    const collapseOpen = () => {
+    /*const collapseOpen = () => {
         setIsOpen(prevIsOpen => !prevIsOpen);
         setClassName(prevClassName =>
             prevClassName.includes('collapse_description_open')
@@ -23,15 +22,24 @@ function Collapse(props) {
                 ? prevClassNameImg.replace('img_open', '')
                 : prevClassNameImg + 'img_open'
         );
-    }
+    }*/
 
     const open = event => {
-        collapseOpen();
-        imgOpen();
+        //collapseOpen();
+        //imgOpen();
+        if (isOpen === 'false') {
+            setClassName('collapse_description_open')
+            setClassNameImg('img_open')
+            setIsOpen('true')
+        }else {
+            setClassName('collapse_description_close')
+            setClassNameImg('img_close')
+            setIsOpen('false')
+        }
     }
 
     return (
-        <div className="collapse">
+            <div className="collapse">
             <div className="collapse_title">
                 <h2>{props.title}</h2>
                 <img src={arrowUp} alt='Flèches vers le haut' className={classNameImg} onClick={open}/>

@@ -37,5 +37,11 @@
             margin: 0;
             width: 75%;
         }
+
+        @include tablet-only {
+            margin: 0;
+            left: 15%;
+            width: 75%;
+        }
     }
 }

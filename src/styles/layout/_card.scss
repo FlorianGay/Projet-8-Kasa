@@ -20,8 +20,11 @@
         margin-top: 22px;
     }
 
+    @include tablet-only {
+        gap: 25px;
+    }
+
     .gallery_card {
-        flex: 1;
         margin: 0;
         position: relative;
 
@@ -41,6 +44,19 @@
             bottom: 20px;
             left: 20px;
             width: 75%;
+
+            @include mobile-only {
+                bottom: 15px;
+                width: 90%;
+            }
+
+            @include tablet-only {
+                height: 20%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                bottom: 10px;
+            }
         }
     }
 }

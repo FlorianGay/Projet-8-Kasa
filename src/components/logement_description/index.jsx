@@ -24,7 +24,7 @@ function LogementDescription(props) {
                     <h3>{props.location}</h3>
                 </div>
                 <div>
-                <   ul className="logement_tags">{listTags}</ul>
+                    <ul className="logement_tags">{listTags}</ul>
                 </div>
             </div>
             <div className="host_and_rate">

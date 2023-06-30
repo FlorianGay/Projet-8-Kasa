@@ -44,6 +44,10 @@
             font-size: 14px;
             align-self: center;
         }
+
+        @include tablet-only {
+            align-self: center;
+        }
     }
 
     a:visited {

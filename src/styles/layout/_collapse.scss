@@ -46,18 +46,26 @@
 
         .img_open {
             transform: rotate(-180deg);
-            transition-duration: 1000ms;
+            transition-duration: 500ms;
+        }
+
+        .img_close {
+            transform: rotate(0);
+            transition-duration: 500ms;
         }
 
     }
 
     .collapse_description {
-        display: none;
+        display: flex;
         align-items: center;
         border-radius: 10px 10px 5px 5px;
         background: var(--gray, #f6f6f6);
-        padding: 25px 28px 20px 20px;
-
+        padding: 0 28px 0 20px;
+        //padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        
         span, li {
             font-family: 'Montserrat', sans-serif;
             font-size: 18px;
@@ -76,7 +84,14 @@
     }
 
     .collapse_description_open {
-        display: flex;
+        padding: 25px 28px 20px 20px;
+        max-height: 300px;
+        transition: max-height 1000ms ease-in-out;
     }
-    
+
+    .collapse_description_close {
+        padding: 0 28px 0 20px;
+        max-height: 0;
+        transition: max-height 500ms ease-in-out;
+    }
 }
