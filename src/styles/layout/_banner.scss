@@ -8,6 +8,11 @@
     border-radius: 25px;
     height: 223px;
 
+    @include tablet-only {
+        max-height: 170px;
+        margin-top: 25px;
+    }
+
     @include mobile-only {
         height: 111px;
         margin: 0;
@@ -30,18 +35,21 @@
         left: 25%;
         color: white;
 
-        @include mobile-only {
-            font-size: 24px;
-            left: 16px;
-            top: 31px;
-            margin: 0;
-            width: 75%;
-        }
-
         @include tablet-only {
             margin: 0;
             left: 15%;
             width: 75%;
+            font-size: 36px;
         }
+
+        @include mobile-only {
+            font-size: 24px;
+            left: 5%;
+            top: 20%;
+            margin: 0;
+            max-width: 75%;
+        }
+
+        
     }
 }

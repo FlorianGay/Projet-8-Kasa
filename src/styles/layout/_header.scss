@@ -7,6 +7,11 @@ header {
     margin : 45px 100px 0 100px;
     justify-content: space-between;
 
+    @include tablet-only {
+        margin: 45px 0;
+        max-width: 1024px;
+    }
+
     @include mobile-only {
         margin: 20px 0 27px 0;
     }
@@ -15,8 +20,15 @@ header {
         width: 210.32px;
         height: 68px;
 
+        @include tablet-only {
+            width: 100%;
+            max-width: 170px;
+            height: auto;
+        }
+
         @include mobile-only {
-            width: 145px;
+            max-width: 145px;
+            width: 100%;
             height: 46.9px;
         }
     }
@@ -29,6 +41,11 @@ header {
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 24px;
+
+        @include tablet-only {
+            font-size: 18px;
+            gap: 37px;
+        }
 
         @include mobile-only {
             gap: 26px;

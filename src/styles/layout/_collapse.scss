@@ -27,6 +27,11 @@
             font-weight: 500;
             margin: 0;
 
+            @include tablet-only {
+                font-size: 18px;
+                align-self: center;
+            }
+
             @include mobile-only {
                 font-size: 13px;
                 height: 16px;
@@ -61,8 +66,6 @@
         align-items: center;
         border-radius: 10px 10px 5px 5px;
         background: var(--gray, #f6f6f6);
-        padding: 0 28px 0 20px;
-        //padding: 0;
         max-height: 0;
         overflow: hidden;
         
@@ -86,12 +89,13 @@
     .collapse_description_open {
         padding: 25px 28px 20px 20px;
         max-height: 300px;
-        transition: max-height 1000ms ease-in-out;
+        transition: all 1000ms ease-in-out;
     }
 
     .collapse_description_close {
         padding: 0 28px 0 20px;
         max-height: 0;
-        transition: max-height 500ms ease-in-out;
+        overflow: hidden;
+        transition: all 500ms ease-in-out;
     }
 }

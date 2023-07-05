@@ -14,6 +14,10 @@
     justify-content: space-between;
     margin-top: 24px;
 
+    @include tablet-only {
+        flex-direction: column;
+    }
+
     @include mobile-only {
         flex-direction: column;
         gap: 16px;
@@ -33,6 +37,11 @@
             font-size: 36px;
             margin: 0;
             font-weight: 500;
+
+            @include tablet-only {
+                font-size: 24px;
+            }
+
             @include mobile-only {
                 font-size: 18px;
             }
@@ -42,6 +51,10 @@
             font-size: 18px;
             margin: 0;
             font-weight: 500;
+
+            @include tablet-only {
+                font-size: 16px;
+            }
 
             @include mobile-only {
                 font-size: 14px;
@@ -58,9 +71,8 @@
             @include mobile-only {
                 margin: 10px 0 0 0;
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
             }
-
 
             li {
                 padding: 3px 31px 2px 30px;
@@ -71,6 +83,11 @@
                 font-size: 14px;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 500;
+
+                @include tablet-only {
+                    flex-shrink: 0;
+                    font-size: 12px;
+                }
 
                 @include mobile-only {
                     font-size: 10px;
@@ -84,6 +101,12 @@
         display: flex;
         flex-direction: column;
         gap: 21px;
+
+        @include tablet-only {
+            gap: 10px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         @include mobile-only {
             flex-direction: row-reverse;
@@ -108,6 +131,10 @@
                 margin: 0;
                 align-self: center;
 
+                @include tablet-only {
+                    font-size: 16px;
+                }
+
                 @include mobile-only {
                     font-size: 12px;
                     width: 30%;
@@ -119,6 +146,11 @@
                 height: 64px;
                 object-fit: cover;
                 border-radius: 64px;
+
+                @include tablet-only {
+                    width: 48px;
+                    height: 48px;
+                }
 
                 @include mobile-only {
                     width: 32px;
@@ -135,12 +167,16 @@
                 width: 36px;
                 height: 36px;
 
+                @include tablet-only {
+                    width: 26px;
+                    height: 26px;
+                }
+
                 @include mobile-only {
                     width: 18px;
                     height: 18px;
                 }
            }
         }
-
     }
 }

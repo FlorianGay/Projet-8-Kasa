@@ -11,6 +11,12 @@
     padding: 56px 50px;
     margin-top: 43px;
 
+    @include tablet-only {
+        gap: 25px;
+        padding: 28px 25px;
+        margin-top: 21px;
+    }
+
     @include mobile-only {
         display: flex;
         flex-direction: column;
@@ -20,9 +26,7 @@
         margin-top: 22px;
     }
 
-    @include tablet-only {
-        gap: 25px;
-    }
+    
 
     .gallery_card {
         margin: 0;
@@ -45,11 +49,6 @@
             left: 20px;
             width: 75%;
 
-            @include mobile-only {
-                bottom: 15px;
-                width: 90%;
-            }
-
             @include tablet-only {
                 height: 20%;
                 overflow: hidden;
@@ -57,6 +56,13 @@
                 white-space: nowrap;
                 bottom: 10px;
             }
+
+            @include mobile-only {
+                bottom: 15px;
+                width: 90%;
+            }
+
+            
         }
     }
 }

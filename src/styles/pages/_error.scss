@@ -40,12 +40,12 @@
         font-weight: 500;
         text-decoration: underline;
 
-        @include mobile-only {
-            font-size: 14px;
+        @include tablet-only {
             align-self: center;
         }
 
-        @include tablet-only {
+        @include mobile-only {
+            font-size: 14px;
             align-self: center;
         }
     }
