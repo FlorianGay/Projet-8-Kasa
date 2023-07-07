@@ -4,10 +4,13 @@ import collapseList from '../../datas/propos.json'
 import bannerImg from '../../assets/banner_2.png'
 import '../../styles/pages/_propos.scss'
 
+
 function Propos() {
     return (
         <div>
-            <Banner bannerImg={bannerImg}/>
+            <div className="about_banner">
+                <Banner bannerImg={bannerImg}/>
+            </div>
             <div className={'collapse-group'}>
                 {
                     collapseList.map((list, index) =>

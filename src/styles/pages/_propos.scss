@@ -11,3 +11,16 @@
         padding: 0;
     }
 }
+
+.about_banner {
+
+    @include mobile-only {
+        min-height: 223px;
+        height: 100%;
+
+        .banner {
+            min-height: 223px;
+        }
+    }
+    }
+    

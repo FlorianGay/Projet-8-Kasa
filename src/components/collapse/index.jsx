@@ -30,8 +30,8 @@ function Collapse(props) {
                 {
                     Array.isArray(props.description)
                         ? (<ul>
-                                {props.description.map(item => (
-                                    <li>{item}</li>
+                                {props.description.map((item, index) => (
+                                    <li key={index}>{item}</li>
                                 ))}
                             </ul>
                         ) : (

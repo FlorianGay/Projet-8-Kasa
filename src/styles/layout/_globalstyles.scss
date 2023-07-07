@@ -5,8 +5,7 @@ body {
     max-width: 1440px;
 
     @include mobile-only {
-        max-width: 375px;
-        margin: 0 20px;
+        max-width: 768px;
     }
 
     main {

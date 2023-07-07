@@ -9,8 +9,8 @@ function LogementDescription(props) {
         const array = [];
         for (let i = 0; i < 5; i++) {
             array.push(i < rating
-                ? <Stars className={'red'}/>
-                : <Stars className={'gray'}/>
+                ? <Stars key={i} className={'red'}/>
+                : <Stars key={i} className={'gray'}/>
             )
         }
         return array;
